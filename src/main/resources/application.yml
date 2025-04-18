@@ -1,0 +1,32 @@
+server:
+    port: ${SERVER_PORT:8080}
+
+application:
+  title: Customer Service
+  version: 1.0.0
+
+spring-boot:
+  version: 3.4.4
+
+spring:
+  application:
+     name: customer-service
+
+postgres:
+  host: ${POSTGRES_HOST:localhost}
+  port: ${POSTGRES_PORT:5432}
+  database: ${POSTGRES_DB:customer_db}
+  user: ${POSTGRES_USER:postgres}
+  pass: ${POSTGRES_PASSWORD:password}
+  pool:
+    initialSize: 5
+    maxSize: 20
+
+
+logging:
+  level:
+    root: ${LOGGING_LEVEL}
+    co.com.cotrafa: ${LOGGING_LEVEL}
+    co.com.onnovacion: ${LOGGING_LEVEL}
+    org.springframework.web: ${LOGGING_LEVEL}
+    io.r2dbc.proxy: DEBUG
